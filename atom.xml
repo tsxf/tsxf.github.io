@@ -51,9 +51,9 @@
     <link href="https://tsxf.github.io/2017/09/22/my-new-post/"/>
     <id>https://tsxf.github.io/2017/09/22/my-new-post/</id>
     <published>2017-09-22T06:13:42.000Z</published>
-    <updated>2017-10-13T09:12:50.499Z</updated>
+    <updated>2017-10-13T13:42:15.622Z</updated>
     
-    <content type="html"><![CDATA[<ol><li>IO NIO</li><li>网络编程基本概念：TCP/IP协议，IP地址，网关</li><li>TCP编程：Socket概念，TCP连接，UDP编程，TCP服务器多线程模型</li><li>Email编程：SMTP协议，发送邮件，发送附件，嵌入附件，POP3协议，接收邮件</li><li>Http客户端编程：HTTP协议，URLConnection</li><li>RMI远程调用：Java RMI原理＋示例</li><li>WebService  </li></ol><a id="more"></a>  <p>&ensp;&ensp; 默认情况下，Hexo生成的超链接都是绝对地址。例如，如果您的网名为example.com,您有一篇文章名为hello，那么绝对链接可能像这样：<a href="http://example.com/hello.html，它是绝对于域名的。相对链接像这样：/hello.html，也就是说，无论用什么域名访问该站点，都没有关系，这在进行反向代理时可能用到。通常情况下，建议使用绝对地址。" target="_blank" rel="external">http://example.com/hello.html，它是绝对于域名的。相对链接像这样：/hello.html，也就是说，无论用什么域名访问该站点，都没有关系，这在进行反向代理时可能用到。通常情况下，建议使用绝对地址。</a></p><p>&emsp;如果您的网站存放在子目录中，例如 <a href="http://yoursite.com/blog，则请将您的" target="_blank" rel="external">http://yoursite.com/blog，则请将您的</a> url 设为 <a href="http://yoursite.comblog" target="_blank" rel="external">http://yoursite.comblog</a> 并把 root 设为 /blog/。</p><h2 id="决赛的房间爱思帝佛奥集散地佛奥数据对方"><a href="#决赛的房间爱思帝佛奥集散地佛奥数据对方" class="headerlink" title="决赛的房间爱思帝佛奥集散地佛奥数据对方"></a>决赛的房间爱思帝佛奥集散地佛奥数据对方</h2>]]></content>
+    <content type="html"><![CDATA[<ol><li>IO NIO</li><li>网络编程基本概念：TCP/IP协议，IP地址，网关</li><li>TCP编程：Socket概念，TCP连接，UDP编程，TCP服务器多线程模型</li><li>Email编程：SMTP协议，发送邮件，发送附件，嵌入附件，POP3协议，接收邮件</li><li>Http客户端编程：HTTP协议，URLConnection</li><li>RMI远程调用：Java RMI原理＋示例</li><li>WebService  </li></ol><a id="more"></a>  <p>&ensp;&ensp; 默认情况下，Hexo生成的超链接都是绝对地址。例如，如果您的网名为example.com,您有一篇文章名为hello，那么绝对链接可能像这样：<a href="http://example.com/hello.html，它是绝对于域名的。相对链接像这样：/hello.html，也就是说，无论用什么域名访问该站点，都没有关系，这在进行反向代理时可能用到。通常情况下，建议使用绝对地址。" target="_blank" rel="external">http://example.com/hello.html，它是绝对于域名的。相对链接像这样：/hello.html，也就是说，无论用什么域名访问该站点，都没有关系，这在进行反向代理时可能用到。通常情况下，建议使用绝对地址。</a></p><p>&emsp;如果您的网站存放在子目录中，例如 <a href="http://yoursite.com/blog，则请将您的" target="_blank" rel="external">http://yoursite.com/blog，则请将您的</a> url 设为 <a href="http://yoursite.comblog" target="_blank" rel="external">http://yoursite.comblog</a> 并把 root 设为 /blog/。</p>]]></content>
     
     <summary type="html">
     
