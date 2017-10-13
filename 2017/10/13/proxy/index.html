@@ -23,7 +23,7 @@
 <meta property="og:image" content="https://i.imgur.com/CRRGaNi.png">
 <meta property="og:image" content="https://i.imgur.com/p1L8OJ5.png">
 <meta property="og:image" content="https://i.imgur.com/LxenOyo.png">
-<meta property="og:updated_time" content="2017-10-13T09:09:10.272Z">
+<meta property="og:updated_time" content="2017-10-13T09:22:23.793Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="proxy">
 <meta name="twitter:description" content="&amp;emsp;&amp;emsp;&amp;emsp;&amp;emsp;&amp;emsp;&amp;emsp;&amp;emsp;&amp;emsp;&amp;emsp;&amp;emsp;&amp;emsp;&amp;emsp; java中的代理模式  代理的分类 静态代理 动态代理  &amp;emsp;静态代理代码在编译期间就有了，也就是事先写好了代理代码。动态代理，在编译期间没有生成，在程序运行中生成的代理类。JDK的动态代理要求必须是接口。 静态代理&amp;emsp;静态代理模式其实很">
@@ -512,6 +512,13 @@ catch (ClassNotFoundException localClassNotFoundException)
 <p><strong>1. toString() hashCode() equal()方法 调用逻辑：这个三个Object上的方法，如果被调用将和其他接口方法方法处理逻辑一样，都会经过invocationHandler逻辑，从上面的字节码结果就可以明显看出。其他Object上的方法将不会走代理处理逻辑，直接走Proxy继承的Object上方法逻辑。</strong></p>
 <p><strong>2. interface 含有equals,toString hashCode方法时，和处理普通接口方法一样，都会走invocation handler逻辑，以目标对象重写的逻辑为准去触发方法逻辑；</strong></p>
 <p><strong>3. interface含有重复的方法签名,以接口传入顺序为准，谁在前面就用谁的方法，代理类中只会保留一个，不会有重复的方法签名；</strong></p>
+<p>参考文章：</p>
+<p>  <a href="https://mp.weixin.qq.com/s/cTJ_IankiFOdwZZLq3mHQA" target="_blank" rel="external">Java帝国之动态代理</a></p>
+<p>  <a href="http://www.importnew.com/23168.html" target="_blank" rel="external">JDK动态代理详解 </a></p>
+<p> <a href="http://www.codekk.com/blogs/detail/54cfab086c4761e5001b253d" target="_blank" rel="external">公共技术点之 Java 动态代理 </a></p>
+<p><a href="http://www.importnew.com/23972.html" target="_blank" rel="external">Java核心技术点之动态代理 </a></p>
+<p><a href="http://www.importnew.com/26116.html" target="_blank" rel="external">说说 JAVA 代理模式 </a></p>
+<p><a href="http://www.jianshu.com/p/a1d094fc6c00" target="_blank" rel="external">说说 JAVA 代理模式 </a>  </p>
   
 	</div>
 		<footer class="article-footer clearfix">
