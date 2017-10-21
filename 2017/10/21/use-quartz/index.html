@@ -11,18 +11,18 @@
     
 
     
-    <meta name="description" content="简要说明&amp;emsp;在开发中经常会遇到需要定时运行的任务或者需要重复进行的任务，jdk提供了一个Timer可以完成这样的任务，但是Timer不能处理并发任务，因为一个Timer同一时刻只能运行一个任务；也不能处理类似Linux里面的cron任务，更为重要的是如果遇到了异常没有捕获到或者任务阻塞，Timer就会挂掉，任务就得不到执行。现在推荐使用Quartz来做这样的事情。&amp;emsp;Quartz任">
+    <meta name="description" content="简要说明&amp;emsp;在开发中经常会遇到需要定时运行的任务或者需要重复进行的任务，jdk提供了一个Timer可以完成这样的任务，但是Timer不能处理并发任务，因为一个Timer同一时刻只能运行一个任务；也不能处理类似Linux里面的cron任务，更为重要的是如果遇到了异常没有捕获到或者任务阻塞，Timer就会挂掉，任务就得不到执行。现在推荐使用Quartz来做这样的事情。">
 <meta name="keywords" content="文章">
 <meta property="og:type" content="article">
 <meta property="og:title" content="use-quartz">
 <meta property="og:url" content="https://tsxf.github.io/2017/10/21/use-quartz/index.html">
 <meta property="og:site_name" content="一口田的独立博客">
-<meta property="og:description" content="简要说明&amp;emsp;在开发中经常会遇到需要定时运行的任务或者需要重复进行的任务，jdk提供了一个Timer可以完成这样的任务，但是Timer不能处理并发任务，因为一个Timer同一时刻只能运行一个任务；也不能处理类似Linux里面的cron任务，更为重要的是如果遇到了异常没有捕获到或者任务阻塞，Timer就会挂掉，任务就得不到执行。现在推荐使用Quartz来做这样的事情。&amp;emsp;Quartz任">
+<meta property="og:description" content="简要说明&amp;emsp;在开发中经常会遇到需要定时运行的任务或者需要重复进行的任务，jdk提供了一个Timer可以完成这样的任务，但是Timer不能处理并发任务，因为一个Timer同一时刻只能运行一个任务；也不能处理类似Linux里面的cron任务，更为重要的是如果遇到了异常没有捕获到或者任务阻塞，Timer就会挂掉，任务就得不到执行。现在推荐使用Quartz来做这样的事情。">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2017-10-21T08:43:58.300Z">
+<meta property="og:updated_time" content="2017-10-21T09:01:14.306Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="use-quartz">
-<meta name="twitter:description" content="简要说明&amp;emsp;在开发中经常会遇到需要定时运行的任务或者需要重复进行的任务，jdk提供了一个Timer可以完成这样的任务，但是Timer不能处理并发任务，因为一个Timer同一时刻只能运行一个任务；也不能处理类似Linux里面的cron任务，更为重要的是如果遇到了异常没有捕获到或者任务阻塞，Timer就会挂掉，任务就得不到执行。现在推荐使用Quartz来做这样的事情。&amp;emsp;Quartz任">
+<meta name="twitter:description" content="简要说明&amp;emsp;在开发中经常会遇到需要定时运行的任务或者需要重复进行的任务，jdk提供了一个Timer可以完成这样的任务，但是Timer不能处理并发任务，因为一个Timer同一时刻只能运行一个任务；也不能处理类似Linux里面的cron任务，更为重要的是如果遇到了异常没有捕获到或者任务阻塞，Timer就会挂掉，任务就得不到执行。现在推荐使用Quartz来做这样的事情。">
 
     
     <link rel="alternative" href="/atom.xml" title="一口田的独立博客" type="application/atom+xml">
@@ -102,7 +102,7 @@
 		
 		</div>
 		
-		<h2 id="简要说明"><a href="#简要说明" class="headerlink" title="简要说明"></a>简要说明</h2><p>&emsp;在开发中经常会遇到需要定时运行的任务或者需要重复进行的任务，jdk提供了一个Timer可以完成这样的任务，但是Timer不能处理并发任务，因为一个Timer同一时刻只能运行一个任务；也不能处理类似Linux里面的cron任务，更为重要的是如果遇到了异常没有捕获到或者任务阻塞，Timer就会挂掉，任务就得不到执行。现在推荐使用Quartz来做这样的事情。<br>&emsp;Quartz任务默认是无状态，例如我们定义一个 trigger，每 2 分钟执行一次，但是某些情况下一个任务可能需要 3 分钟才能执行完，这样，在上一个任务还处在执行状态时，下一次触发时间已经到了。对于无状态任务，只要触发时间到了就会被执行，因为几个相同任务可以并发执行。</p>
+		<h2 id="简要说明"><a href="#简要说明" class="headerlink" title="简要说明"></a>简要说明</h2><p>&emsp;在开发中经常会遇到需要定时运行的任务或者需要重复进行的任务，jdk提供了一个Timer可以完成这样的任务，但是Timer不能处理并发任务，因为一个Timer同一时刻只能运行一个任务；也不能处理类似Linux里面的cron任务，更为重要的是如果遇到了异常没有捕获到或者任务阻塞，Timer就会挂掉，任务就得不到执行。现在推荐使用Quartz来做这样的事情。<br><a id="more"></a><br>&emsp;Quartz任务默认是无状态，例如我们定义一个 trigger，每 2 分钟执行一次，但是某些情况下一个任务可能需要 3 分钟才能执行完，这样，在上一个任务还处在执行状态时，下一次触发时间已经到了。对于无状态任务，只要触发时间到了就会被执行，因为几个相同任务可以并发执行。</p>
 <p>&emsp;作为一个优秀的开源调度框架，Quartz 具有以下特点：</p>
 <ol>
 <li>强大的调度功能，例如支持丰富多样的调度方法，可以满足各种常规及特殊需求</li>
