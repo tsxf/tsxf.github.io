@@ -4,24 +4,25 @@
 <head>
   <meta charset="UTF-8">
   
-    <title>use-slf4j_log4j | 一口田的独立博客</title>
+    <title>log4j搭配slf4j简易使用 | 一口田的独立博客</title>
     <meta name="viewport" content="width=device-width, initial-scale=1,user-scalable=no">
     
     <meta name="author" content="tsxf">
     
 
     
-    <meta name="description" content="log4j搭配slf4j简易使用&amp;emsp;对一个系统来说，日志是不可缺少的，记录日志是软件开发中的重要一环。编写良好的日志代码能为运行应用提供快速的诊断信息和良好的存储结构，方便维护。 &amp;emsp;记录日志也有其缺点，它会让应用变慢。假如输出太详细，可能会导致屏幕闪动。为了减轻这些影响，Log4j 被设计为可靠的，更快的和可扩展的。 &amp;emsp;由于日志很少是应用程序关注的焦点，所以 Log4j">
+    <meta name="description" content="摘要&amp;emsp;对一个系统来说，日志是不可缺少的，记录日志是软件开发中的重要一环。编写良好的日志代码能为运行应用提供快速的诊断信息和良好的存储结构，方便维护。 &amp;emsp;记录日志也有其缺点，它会让应用变慢。假如输出太详细，可能会导致屏幕闪动。为了减轻这些影响，Log4j 被设计为可靠的，更快的和可扩展的。 &amp;emsp;由于日志很少是应用程序关注的焦点，所以 Log4j API 力争做到简单并易于">
+<meta name="keywords" content="文章">
 <meta property="og:type" content="article">
-<meta property="og:title" content="use-slf4j_log4j">
+<meta property="og:title" content="log4j搭配slf4j简易使用">
 <meta property="og:url" content="https://tsxf.github.io/2017/11/13/use-slf4j-log4j/index.html">
 <meta property="og:site_name" content="一口田的独立博客">
-<meta property="og:description" content="log4j搭配slf4j简易使用&amp;emsp;对一个系统来说，日志是不可缺少的，记录日志是软件开发中的重要一环。编写良好的日志代码能为运行应用提供快速的诊断信息和良好的存储结构，方便维护。 &amp;emsp;记录日志也有其缺点，它会让应用变慢。假如输出太详细，可能会导致屏幕闪动。为了减轻这些影响，Log4j 被设计为可靠的，更快的和可扩展的。 &amp;emsp;由于日志很少是应用程序关注的焦点，所以 Log4j">
+<meta property="og:description" content="摘要&amp;emsp;对一个系统来说，日志是不可缺少的，记录日志是软件开发中的重要一环。编写良好的日志代码能为运行应用提供快速的诊断信息和良好的存储结构，方便维护。 &amp;emsp;记录日志也有其缺点，它会让应用变慢。假如输出太详细，可能会导致屏幕闪动。为了减轻这些影响，Log4j 被设计为可靠的，更快的和可扩展的。 &amp;emsp;由于日志很少是应用程序关注的焦点，所以 Log4j API 力争做到简单并易于">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2017-11-14T02:06:06.365Z">
+<meta property="og:updated_time" content="2017-11-14T02:30:26.446Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="use-slf4j_log4j">
-<meta name="twitter:description" content="log4j搭配slf4j简易使用&amp;emsp;对一个系统来说，日志是不可缺少的，记录日志是软件开发中的重要一环。编写良好的日志代码能为运行应用提供快速的诊断信息和良好的存储结构，方便维护。 &amp;emsp;记录日志也有其缺点，它会让应用变慢。假如输出太详细，可能会导致屏幕闪动。为了减轻这些影响，Log4j 被设计为可靠的，更快的和可扩展的。 &amp;emsp;由于日志很少是应用程序关注的焦点，所以 Log4j">
+<meta name="twitter:title" content="log4j搭配slf4j简易使用">
+<meta name="twitter:description" content="摘要&amp;emsp;对一个系统来说，日志是不可缺少的，记录日志是软件开发中的重要一环。编写良好的日志代码能为运行应用提供快速的诊断信息和良好的存储结构，方便维护。 &amp;emsp;记录日志也有其缺点，它会让应用变慢。假如输出太详细，可能会导致屏幕闪动。为了减轻这些影响，Log4j 被设计为可靠的，更快的和可扩展的。 &amp;emsp;由于日志很少是应用程序关注的焦点，所以 Log4j API 力争做到简单并易于">
 
     
     <link rel="alternative" href="/atom.xml" title="一口田的独立博客" type="application/atom+xml">
@@ -81,7 +82,7 @@
 		<header class="article-info clearfix">
   <h1 itemprop="name">
     
-      <a href="/2017/11/13/use-slf4j-log4j/" title="use-slf4j_log4j" itemprop="url">use-slf4j_log4j</a>
+      <a href="/2017/11/13/use-slf4j-log4j/" title="log4j搭配slf4j简易使用" itemprop="url">log4j搭配slf4j简易使用</a>
   </h1>
   <p class="article-author">By
        
@@ -97,11 +98,11 @@
 		<div id="toc" class="toc-article">
 			<strong class="toc-title">文章目录</strong>
 		
-			<ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#log4j搭配slf4j简易使用"><span class="toc-number">1.</span> <span class="toc-text">log4j搭配slf4j简易使用</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#日志级别"><span class="toc-number">2.</span> <span class="toc-text">日志级别</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#appender说明"><span class="toc-number">3.</span> <span class="toc-text">appender说明</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#其他appender补充"><span class="toc-number">4.</span> <span class="toc-text">其他appender补充</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#layout说明"><span class="toc-number">5.</span> <span class="toc-text">layout说明</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#具体例子-properties使用"><span class="toc-number">6.</span> <span class="toc-text">具体例子(properties使用)</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-slf4j说明及使用"><span class="toc-number">7.</span> <span class="toc-text">2. slf4j说明及使用</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3-完整例子"><span class="toc-number">8.</span> <span class="toc-text">3. 完整例子</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#参考内容："><span class="toc-number">9.</span> <span class="toc-text">参考内容：</span></a></li></ol>
+			<ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#摘要"><span class="toc-number">1.</span> <span class="toc-text">摘要</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#日志级别"><span class="toc-number">2.</span> <span class="toc-text">日志级别</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#appender说明"><span class="toc-number">3.</span> <span class="toc-text">appender说明</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#其他appender补充"><span class="toc-number">4.</span> <span class="toc-text">其他appender补充</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#layout说明"><span class="toc-number">5.</span> <span class="toc-text">layout说明</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#具体例子-properties使用"><span class="toc-number">6.</span> <span class="toc-text">具体例子(properties使用)</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-slf4j说明及使用"><span class="toc-number">7.</span> <span class="toc-text">2. slf4j说明及使用</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3-完整例子"><span class="toc-number">8.</span> <span class="toc-text">3. 完整例子</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#参考内容："><span class="toc-number">9.</span> <span class="toc-text">参考内容：</span></a></li></ol>
 		
 		</div>
 		
-		<h2 id="log4j搭配slf4j简易使用"><a href="#log4j搭配slf4j简易使用" class="headerlink" title="log4j搭配slf4j简易使用"></a>log4j搭配slf4j简易使用</h2><p>&emsp;对一个系统来说，日志是不可缺少的，记录日志是软件开发中的重要一环。编写良好的日志代码能为运行应用提供快速的诊断信息和良好的存储结构，方便维护。</p>
+		<h2 id="摘要"><a href="#摘要" class="headerlink" title="摘要"></a>摘要</h2><p>&emsp;对一个系统来说，日志是不可缺少的，记录日志是软件开发中的重要一环。编写良好的日志代码能为运行应用提供快速的诊断信息和良好的存储结构，方便维护。</p>
 <p>&emsp;记录日志也有其缺点，它会让应用变慢。假如输出太详细，可能会导致屏幕闪动。为了减轻这些影响，Log4j 被设计为可靠的，更快的和可扩展的。</p>
 <p>&emsp;由于日志很少是应用程序关注的焦点，所以 Log4j API 力争做到简单并易于理解和使用。</p>
 <p>&emsp;常见的开源日志系统有：log4j，logback,jdk自带的log，appach中的commons log，有这么多日志系统，如果要切换日志系统，不同的日志系统使用使不一样的，所以就需要一种面向接口，已经写好的代码不用变动，改改配置文件，换换jar就可以，slf4j应运而生。</p>
@@ -294,6 +295,16 @@ logger.debug(&quot;Processing trade with id: {} and symbol : {} &quot;, id, symb
 		<footer class="article-footer clearfix">
 <div class="article-catetags">
 
+<div class="article-categories">
+  <span></span>
+  <a class="article-category-link" href="/categories/blog/">blog</a>
+</div>
+
+
+  <div class="article-tags">
+  
+  <span></span> <a href="/tags/文章/">文章</a>
+  </div>
 
 </div>
 
@@ -301,7 +312,7 @@ logger.debug(&quot;Processing trade with id: {} and symbol : {} &quot;, id, symb
 
 	<div class="article-share" id="share">
 	
-	  <div data-url="https://tsxf.github.io/2017/11/13/use-slf4j-log4j/" data-title="use-slf4j_log4j | 一口田的独立博客" data-tsina="" class="share clearfix">
+	  <div data-url="https://tsxf.github.io/2017/11/13/use-slf4j-log4j/" data-title="log4j搭配slf4j简易使用 | 一口田的独立博客" data-tsina="" class="share clearfix">
 	  </div>
 	
 	</div>
@@ -327,7 +338,7 @@ logger.debug(&quot;Processing trade with id: {} and symbol : {} &quot;, id, symb
 
 	
 <section id="comments" class="comment">
-	<div class="ds-thread" data-thread-key="2017/11/13/use-slf4j-log4j/" data-title="use-slf4j_log4j" data-url="https://tsxf.github.io/2017/11/13/use-slf4j-log4j/"></div>
+	<div class="ds-thread" data-thread-key="2017/11/13/use-slf4j-log4j/" data-title="log4j搭配slf4j简易使用" data-url="https://tsxf.github.io/2017/11/13/use-slf4j-log4j/"></div>
 </section>
 
 
@@ -338,7 +349,7 @@ logger.debug(&quot;Processing trade with id: {} and symbol : {} &quot;, id, symb
   <div id="toc" class="toc-aside">
   <strong class="toc-title">文章目录</strong>
  
- <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#log4j搭配slf4j简易使用"><span class="toc-number">1.</span> <span class="toc-text">log4j搭配slf4j简易使用</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#日志级别"><span class="toc-number">2.</span> <span class="toc-text">日志级别</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#appender说明"><span class="toc-number">3.</span> <span class="toc-text">appender说明</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#其他appender补充"><span class="toc-number">4.</span> <span class="toc-text">其他appender补充</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#layout说明"><span class="toc-number">5.</span> <span class="toc-text">layout说明</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#具体例子-properties使用"><span class="toc-number">6.</span> <span class="toc-text">具体例子(properties使用)</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-slf4j说明及使用"><span class="toc-number">7.</span> <span class="toc-text">2. slf4j说明及使用</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3-完整例子"><span class="toc-number">8.</span> <span class="toc-text">3. 完整例子</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#参考内容："><span class="toc-number">9.</span> <span class="toc-text">参考内容：</span></a></li></ol>
+ <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#摘要"><span class="toc-number">1.</span> <span class="toc-text">摘要</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#日志级别"><span class="toc-number">2.</span> <span class="toc-text">日志级别</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#appender说明"><span class="toc-number">3.</span> <span class="toc-text">appender说明</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#其他appender补充"><span class="toc-number">4.</span> <span class="toc-text">其他appender补充</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#layout说明"><span class="toc-number">5.</span> <span class="toc-text">layout说明</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#具体例子-properties使用"><span class="toc-number">6.</span> <span class="toc-text">具体例子(properties使用)</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-slf4j说明及使用"><span class="toc-number">7.</span> <span class="toc-text">2. slf4j说明及使用</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3-完整例子"><span class="toc-number">8.</span> <span class="toc-text">3. 完整例子</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#参考内容："><span class="toc-number">9.</span> <span class="toc-text">参考内容：</span></a></li></ol>
  
   </div>
 
@@ -361,7 +372,7 @@ logger.debug(&quot;Processing trade with id: {} and symbol : {} &quot;, id, symb
 		<ul>
 		
 		  
-			<li><a href="/categories/blog/" title="blog">blog<sup>3</sup></a></li>
+			<li><a href="/categories/blog/" title="blog">blog<sup>4</sup></a></li>
 		  
 		
 		</ul>
@@ -374,7 +385,7 @@ logger.debug(&quot;Processing trade with id: {} and symbol : {} &quot;, id, symb
 		<ul class="clearfix">
 		
 			
-				<li><a href="/tags/文章/" title="文章">文章<sup>3</sup></a></li>
+				<li><a href="/tags/文章/" title="文章">文章<sup>4</sup></a></li>
 			
 		
 		</ul>
